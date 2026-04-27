@@ -1,0 +1,175 @@
+/* 1. Reset Body to ensure no gaps at the edges */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f1f5f9;
+}
+
+/* 2. Ensure the layout takes full height */
+.layout {
+  display: flex;
+  min-height: 100vh; 
+}
+
+/* 3. The Sidebar Fixes */
+.sidebar {
+  width: 230px;
+  min-height: 100vh; /* Changed height to min-height */
+  background: #0f172a;
+  color: #ffffff !important; /* Force white text */
+  padding: 20px;
+  box-sizing: border-box; /* Ensures padding doesn't add to width */
+  
+}
+
+/* Fix for the Black Medicare Text */
+.sidebar h2 {
+  margin: 0 0 30px 0; /* Remove top margin that causes space */
+  color: #ffffff; 
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar li {
+  color: #cbd5e1; /* Slightly muted white for non-active links */
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Style for the active page link */
+.sidebar li.active {
+  background: #38bdf8;
+  color: #0f172a; /* Dark text on light blue background for contrast */
+}
+
+.sidebar li:hover:not(.active) {
+  background: #1e293b;
+  color: white;
+}
+/* MAIN */
+.main {
+  flex: 1;
+  padding: 25px;
+}
+
+/* HEADER */
+.header h1 {
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  opacity: 1 !important;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #0f172a;
+  color: white;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+/* BUTTON */
+button {
+  padding: 10px 14px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: black;
+}
+
+/* INPUT */
+input {
+  padding: 8px;
+  margin: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0f172a;
+}
+
+.login-container form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+}
+
+.login-container input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}

@@ -17,7 +17,7 @@ export default function App() {
       <Login
         onLoginSuccess={(userData) => {
           setUser(userData);
-          setPage("dashboard"); // 🔥 important for test + UI consistency
+          setPage("dashboard"); //  important for test + UI consistency
         }}
       />
     );
